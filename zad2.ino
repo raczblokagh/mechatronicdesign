@@ -27,7 +27,8 @@ void loop()
       Serial.println("Nie mozna dzielic przez 0!");
       return;
     }
-    Serial.print("Wynik : "+calculateExpression());
+    Serial.print("Wynik :");
+	Serial.print(calculateExpression());
     Serial.println();
   }
 }
@@ -37,20 +38,13 @@ double calculateExpression() {
   switch (operation) {
     
     case '+' :
-		return number1 + number2;
-    break; 
-    
+		return number1 + number2;    
     case '-' : 
 		return number1 - number2; 
-    break; 
-    
     case '*' : 
 		return number1 * number2;
-    break; 
-    
     case '/' :
 		return number1 / number2; 
-    break;
     default :
     Serial.println("Niepoprawny symbol!");
     return 0.0;
